@@ -1,27 +1,15 @@
-import AuthButton from "../components/AuthButton";
-import { createClient } from "@/utils/supabase/server";
+import Link from "next/link";
 
-export default async function Index() {
-  const canInitSupabaseClient = () => {
-    // This function is just for the interactive tutorial.
-    // Feel free to remove it once you have Supabase connected.
-    try {
-      createClient();
-      return true;
-    } catch (e) {
-      return false;
-    }
-  };
-
-  const isSupabaseConnected = canInitSupabaseClient();
-
+export default function Page() {
   return (
-    <div className="flex-1 w-full flex flex-col gap-20 items-center">
-      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
-        <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
-          {isSupabaseConnected && <AuthButton />}
-        </div>
-      </nav>
+    <div>
+      <div className="py-20 text-center">
+        <h3 className="font-bold tracking-tight font-serif text-6xl mb-4 max-w-xl mx-auto">
+          A Place to Share Notes for Developers
+        </h3>
+        <p className="max-w-2xl mx-auto">Share your ideas on software, design and techs with the community through bite-sized quick notes. This project began as a corner for me <Link href="https://shijnith.dev" className="text-secondary hover:underline">me</Link> to share notes, but your contribution will sure make it better.</p>
+      </div>
+
     </div>
   );
 }

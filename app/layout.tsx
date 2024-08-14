@@ -1,5 +1,6 @@
-import { GeistSans } from "geist/font/sans";
+import Navbar from "@/components/navbar";
 import "./globals.css";
+import { inter, karla } from "@/lib/fonts";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -17,11 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
-      <body className="bg-background text-foreground">
-        <main className="min-h-screen flex flex-col items-center">
-          {children}
-        </main>
+    <html lang="en" className="dark">
+      <body className={`bg-background max-w-screen-lg text-fg text-base antialiased font-sans container ${inter.variable} ${karla.variable}`}>
+        <Navbar />
+        {children}
       </body>
     </html>
   );
