@@ -16,8 +16,8 @@ export default async function Auth() {
   const isSupabaseConnected = canInitSupabaseClient();
 
   return (
-    <div className="flex justify-between items-center text-sm">
+    <div className="flex items-center justify-between text-sm">
       {isSupabaseConnected && <AuthButton />}
     </div>
-  )
+  );
 }
