@@ -21,10 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`container max-w-screen-lg bg-background font-sans text-base text-fg antialiased ${inter.variable} ${karla.variable}`}
+        className={`min-h-screen w-screen bg-background font-sans text-base text-fg antialiased ${inter.variable} ${karla.variable}`}
       >
         <Navbar />
-        {children}
+        <main className="container h-full max-h-screen max-w-screen-lg overflow-y-auto">
+          {children}
+        </main>
       </body>
     </html>
   );
