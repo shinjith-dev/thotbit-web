@@ -37,3 +37,13 @@
   --col-destructive-fg: 0 37% 92%;
   --col-border: 217 37% 18%;
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
