@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://thotbit-web.pages.dev",
+    canonical: "https://thotbit-web.vercel.app",
   },
 };
 
