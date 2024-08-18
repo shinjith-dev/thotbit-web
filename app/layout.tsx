@@ -93,9 +93,6 @@ export const metadata: Metadata = {
   },
 };
 
-// for cloufflare deplyment
-export const runtime = "edge";
-
 export default function RootLayout({
   children,
 }: {
