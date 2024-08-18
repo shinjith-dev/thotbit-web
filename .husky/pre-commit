@@ -1,2 +1,2 @@
-yarn prettier . --write
+yarn prettier . --check
 yarn next lint
