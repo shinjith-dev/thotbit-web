@@ -66,11 +66,6 @@ module.exports = {
         "destructive-fg": "hsl(var(--col-destructive-fg) / <alpha-value>)",
         border: "hsl(var(--col-border) / <alpha-value>)",
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
