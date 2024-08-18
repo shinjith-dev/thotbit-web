@@ -19,7 +19,7 @@ export default function Note() {
         <p className="text-sm text-subtle sm:text-base">
           A quick and simple service for getting pictures of cats for use as
           placeholders in your designs or code. Just put your image size (width
-          & height) after our URL and you'll get a placeholder.{" "}
+          & height) after our URL and you&apos;ll get a placeholder.{" "}
         </p>
         <p className="pt-1 text-xs text-muted sm:text-sm">
           shinjith-dev on 16th February 2023

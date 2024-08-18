@@ -58,8 +58,6 @@ export default function Login({
 
   return (
     <div className="flex w-full flex-1 flex-col justify-center gap-2 px-8 pt-40 sm:max-w-md">
-
-
       <form className="text-foreground flex w-full flex-1 flex-col justify-center gap-2">
         <label className="text-md" htmlFor="email">
           Email

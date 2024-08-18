@@ -1,4 +1,4 @@
-import AuthButton from "@/components/AuthButton";
+import AuthButton from "./user";
 import { createClient } from "@/utils/supabase/server";
 
 export default async function Auth() {

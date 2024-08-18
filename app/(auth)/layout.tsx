@@ -1,15 +1,13 @@
-import { ReactNode } from "react"
+import { ReactNode } from "react";
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="w-full pt-12 sm:pt-16 md:pt-20">
-      <div className="flex w-full justify-center items-center">
-        {children}
-      </div>
+    <div className="w-full pt-20 sm:pt-24 md:pt-28">
+      <div className="flex w-full items-center justify-center">{children}</div>
     </div>
-  )
+  );
 }
