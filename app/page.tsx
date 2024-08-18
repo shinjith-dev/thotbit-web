@@ -1,6 +1,49 @@
 import Notes from "@/components/notes";
 import Link from "next/link";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Thotbit",
+  description:
+    "Think in bites, share in notes. Thotbit is a modern note-sharing platform for developers. Thotbit allows people to share their knowledge, insights, and experiences through brief notes.",
+  keywords: ["notes", "note", "blogs", "blog", "technology", "tech"],
+  openGraph: {
+    url: "https://thotbit.shinjith.dev",
+    type: "website",
+    title: "Thotbit",
+    description:
+      "Think in bites, share in notes. Thotbit is a modern note-sharing platform for developers. Thotbit allows people to share their knowledge, insights, and experiences through brief notes.",
+    images: [
+      {
+        url: "https://thotbit.shinjith.dev/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "thotbit",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thotbit",
+    description:
+      "Think in bites, share in notes. Thotbit is a modern note-sharing platform for developers. Thotbit allows people to share their knowledge, insights, and experiences through brief notes.",
+    creator: "@shinjith-dev",
+    site: "@shinjith-dev",
+    images: [
+      {
+        url: "https://thotbit.shinjith.dev/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "thotbit",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://thotbit-web.pages.dev",
+  },
+};
+
 export default function Page() {
   return (
     <div className="pt-12 sm:pt-16 md:pt-20">
