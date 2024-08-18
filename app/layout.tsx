@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import "./globals.css";
 import { inter, karla } from "@/lib/fonts";
 import type { Viewport, Metadata } from "next";
+import { UserStoreProvider } from "@/providers/user-provider";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -105,10 +106,12 @@ export default function RootLayout({
       <body
         className={`min-h-screen w-screen bg-background font-sans text-base text-fg antialiased ${inter.variable} ${karla.variable}`}
       >
-        <Navbar />
-        <main className="container h-full max-h-screen max-w-screen-lg overflow-y-auto">
-          {children}
-        </main>
+        <UserStoreProvider>
+          <Navbar />
+          <main className="container h-full max-h-screen max-w-screen-lg overflow-y-auto">
+            {children}
+          </main>
+        </UserStoreProvider>
       </body>
     </html>
   );

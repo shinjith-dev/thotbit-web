@@ -1,6 +1,6 @@
 import Auth from "./auth";
 
-export default function Navbar() {
+export default async function Navbar() {
   return (
     <div className="absolute left-0 top-0 z-[999] w-screen">
       <div className="container relative mx-auto flex w-full max-w-screen-lg items-center justify-between border-b border-border bg-background py-3 sm:py-4 md:py-5">
