@@ -8,6 +8,7 @@ const buttonVariants = cva(
   {
     variants: {
       size: {
+        icon: "p-2 text-lg",
         sm: "py-1.5 px-4 text-sm",
         normal: "py-2 px-4 text-sm",
         lg: "py-2.5 px-6 text-base",
@@ -22,7 +23,7 @@ const buttonVariants = cva(
           "border border-secondary text-secondary hover:bg-secondary hover:text-secondary-fg",
         "primary-link": "p-0 text-primary hover:text-primary/90",
         "secondary-link": "p-0 text-secondary hover:text-secondary/90",
-        icon: "rounded-full hover:bg-surface/45",
+        icon: "rounded-full hover:bg-surface/60 aspect-square",
       },
     },
     defaultVariants: {

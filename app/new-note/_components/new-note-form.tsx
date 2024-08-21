@@ -30,16 +30,16 @@ export default function NewNoteForm() {
     resolver: zodResolver(NoteSchema),
     defaultValues,
   });
-  const [content, setContent] = useState<any>();
-
-  console.log(content);
 
   const onSubmit = (data: z.infer<typeof NoteSchema>) => {
     console.log(data);
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 py-6">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex h-full w-full flex-col gap-3 py-4"
+    >
       <Input
         type="text"
         label="Name"
@@ -61,9 +61,18 @@ export default function NewNoteForm() {
         {...register("description")}
       />
 
-      <MDInput onChange={(value) => setContent(value)} />
+      <MDInput
+        label="Content"
+        description={
+          <p className="text-red-800 dark:text-red-200">
+            {errors.content?.message}
+          </p>
+        }
+        {...register("content")}
+        className="grow"
+      />
 
-      <Button>Share</Button>
+      <Button className="w-fit">Share</Button>
     </form>
   );
 }
