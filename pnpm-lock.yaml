@@ -19,9 +19,6 @@ importers:
       "@radix-ui/react-checkbox":
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      "@radix-ui/react-dialog":
-        specifier: ^1.1.1
-        version: 1.1.1(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       "@radix-ui/react-dropdown-menu":
         specifier: ^2.1.1
         version: 2.1.1(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -163,6 +160,9 @@ importers:
       "@udecode/plate-serializer-docx":
         specifier: ^36.5.3
         version: 36.5.3(@udecode/plate-common@36.3.9(@types/react@18.2.48)(immer@10.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(scheduler@0.23.2)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0)
+      "@udecode/plate-serializer-html":
+        specifier: ^36.0.0
+        version: 36.0.0(@udecode/plate-common@36.3.9(@types/react@18.2.48)(immer@10.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(scheduler@0.23.2)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0)
       "@udecode/plate-serializer-md":
         specifier: ^36.4.0
         version: 36.4.0(@udecode/plate-common@36.3.9(@types/react@18.2.48)(immer@10.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(scheduler@0.23.2)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0)
@@ -202,6 +202,11 @@ importers:
       next:
         specifier: latest
         version: 14.2.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      "plate-serializer-html\n":
+        specifier: |
+          link:@udecode/plate-serializer-html
+        version: |
+          link:@udecode/plate-serializer-html
       postcss:
         specifier: 8.4.33
         version: 8.4.33
@@ -1279,22 +1284,6 @@ packages:
       "@types/react-dom": "*"
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
-    peerDependenciesMeta:
-      "@types/react":
-        optional: true
-      "@types/react-dom":
-        optional: true
-
-  "@radix-ui/react-dialog@1.1.1":
-    resolution:
-      {
-        integrity: sha512-zysS+iU4YP3STKNS6USvFVqI4qqx8EpiwmT5TuCApVEBca+eRCbONi4EgzfNSuVnOXvC5UPHHMjs8RXO6DH9Bg==,
-      }
-    peerDependencies:
-      "@types/react": "*"
-      "@types/react-dom": "*"
-      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
-      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
     peerDependenciesMeta:
       "@types/react":
         optional: true
@@ -2730,6 +2719,20 @@ packages:
       }
     peerDependencies:
       "@udecode/plate-common": ">=36.3.9"
+      react: ">=16.8.0"
+      react-dom: ">=16.8.0"
+      slate: ">=0.94.0"
+      slate-history: ">=0.93.0"
+      slate-hyperscript: ">=0.66.0"
+      slate-react: ">=0.99.0"
+
+  "@udecode/plate-serializer-html@36.0.0":
+    resolution:
+      {
+        integrity: sha512-hOIofWtW0DZsfThjRqCw4pECNI1MmxZv8IgbCi/tdu0ROEcac8nwmgdra4DxW0bDEPgu7cEScwX4F6y8nTjm4A==,
+      }
+    peerDependencies:
+      "@udecode/plate-common": ">=36.0.0"
       react: ">=16.8.0"
       react-dom: ">=16.8.0"
       slate: ">=0.94.0"
@@ -5265,6 +5268,12 @@ packages:
     resolution:
       {
         integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==,
+      }
+
+  html-entities@2.5.2:
+    resolution:
+      {
+        integrity: sha512-K//PSRMQk4FZ78Kyau+mZurHn3FH0Vwr+H36eE0rPbeYkRRi9YxceYPhuN60UwWorxyKHhqoAJl2OFKa4BVtaA==,
       }
 
   htmlparser2@5.0.1:
@@ -9163,28 +9172,6 @@ snapshots:
       "@types/react": 18.2.48
       "@types/react-dom": 18.2.18
 
-  "@radix-ui/react-dialog@1.1.1(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)":
-    dependencies:
-      "@radix-ui/primitive": 1.1.0
-      "@radix-ui/react-compose-refs": 1.1.0(@types/react@18.2.48)(react@18.2.0)
-      "@radix-ui/react-context": 1.1.0(@types/react@18.2.48)(react@18.2.0)
-      "@radix-ui/react-dismissable-layer": 1.1.0(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      "@radix-ui/react-focus-guards": 1.1.0(@types/react@18.2.48)(react@18.2.0)
-      "@radix-ui/react-focus-scope": 1.1.0(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      "@radix-ui/react-id": 1.1.0(@types/react@18.2.48)(react@18.2.0)
-      "@radix-ui/react-portal": 1.1.1(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      "@radix-ui/react-presence": 1.1.0(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      "@radix-ui/react-primitive": 2.0.0(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      "@radix-ui/react-slot": 1.1.0(@types/react@18.2.48)(react@18.2.0)
-      "@radix-ui/react-use-controllable-state": 1.1.0(@types/react@18.2.48)(react@18.2.0)
-      aria-hidden: 1.2.4
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-remove-scroll: 2.5.7(@types/react@18.2.48)(react@18.2.0)
-    optionalDependencies:
-      "@types/react": 18.2.48
-      "@types/react-dom": 18.2.18
-
   "@radix-ui/react-direction@1.1.0(@types/react@18.2.48)(react@18.2.0)":
     dependencies:
       react: 18.2.0
@@ -10281,6 +10268,17 @@ snapshots:
       slate-hyperscript: 0.100.0(slate@0.103.0)
       slate-react: 0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0)
       validator: 13.12.0
+
+  "@udecode/plate-serializer-html@36.0.0(@udecode/plate-common@36.3.9(@types/react@18.2.48)(immer@10.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(scheduler@0.23.2)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0)":
+    dependencies:
+      "@udecode/plate-common": 36.3.9(@types/react@18.2.48)(immer@10.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(scheduler@0.23.2)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0)
+      html-entities: 2.5.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      slate: 0.103.0
+      slate-history: 0.100.0(slate@0.103.0)
+      slate-hyperscript: 0.100.0(slate@0.103.0)
+      slate-react: 0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0)
 
   "@udecode/plate-serializer-md@36.4.0(@udecode/plate-common@36.3.9(@types/react@18.2.48)(immer@10.1.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(scheduler@0.23.2)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate-history@0.100.0(slate@0.103.0))(slate-hyperscript@0.100.0(slate@0.103.0))(slate-react@0.108.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(slate@0.103.0))(slate@0.103.0)":
     dependencies:
@@ -12037,6 +12035,8 @@ snapshots:
   hoist-non-react-statics@3.3.2:
     dependencies:
       react-is: 16.13.1
+
+  html-entities@2.5.2: {}
 
   htmlparser2@5.0.1:
     dependencies:

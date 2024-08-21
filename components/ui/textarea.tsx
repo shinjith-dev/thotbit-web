@@ -2,8 +2,8 @@ import * as React from "react";
 
 import { cn } from "@/lib/cssClass";
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface TextareaProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
   description?: string | React.ReactNode;
 }
@@ -36,16 +36,16 @@ const LabelWrapper = ({
   );
 };
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, label, type, name, description, ...props }, ref) => {
+const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
+  ({ className, label, name, description, ...props }, ref) => {
     return (
       <LabelWrapper name={name} label={label} description={description}>
-        <input
-          type={type}
+        <textarea
+          rows={4}
           name={name}
           id={name}
           className={cn(
-            "placeholder:text-muted-foreground focus-visible:ring-ring flex h-9 w-full rounded-md border border-accent bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50",
+            "placeholder:text-muted-foreground focus-visible:ring-ring flex w-full rounded-md border border-accent bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50",
             className,
           )}
           ref={ref}
@@ -55,6 +55,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     );
   },
 );
-Input.displayName = "Input";
+Textarea.displayName = "Textarea";
 
-export default Input;
+export { Textarea };
