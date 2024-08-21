@@ -5,7 +5,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Textarea } from "@/components/ui/textarea";
-// import MDXInput from "@/components/ui/mdx-input";
+import MDInput from "@/components/ui/md-input";
 import { useState } from "react";
 
 const NoteSchema = z
@@ -61,7 +61,7 @@ export default function NewNoteForm() {
         {...register("description")}
       />
 
-      {/* <MDXInput onChange={(value) => setContent(value)} /> */}
+      <MDInput onChange={(value) => setContent(value)} />
 
       <Button>Share</Button>
     </form>

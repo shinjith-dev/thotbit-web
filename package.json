@@ -84,6 +84,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.52.2",
     "react-lite-youtube-embed": "^2.4.0",
+    "react-remark": "^2.1.0",
     "react-tweet": "^3.2.1",
     "slate": "^0.103.0",
     "slate-history": "^0.100.0",

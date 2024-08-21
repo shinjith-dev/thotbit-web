@@ -44,6 +44,6 @@
   }
 
   body {
-    @apply text-foreground bg-background;
+    @apply bg-background text-fg;
   }
 }
