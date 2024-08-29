@@ -2,23 +2,12 @@ import Link from "next/link";
 import LoginForm, { LoginSchema } from "./_components/LoginForm";
 import { z } from "zod";
 import { redirect } from "next/navigation";
-import { createClient } from "@/utils/supabase/server";
 
 export default function Login() {
   const singnIn = async (data: z.infer<typeof LoginSchema>) => {
     "use server";
 
     const { email, password } = data;
-    const supabase = createClient();
-
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
-    if (error) {
-      // handle login error
-    }
 
     return redirect("/");
   };

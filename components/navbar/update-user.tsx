@@ -1,10 +1,9 @@
 "use client";
 import { useUserStore } from "@/hooks/use-user-store";
-import { User } from "@supabase/supabase-js";
 import { useEffect } from "react";
 
 interface Props {
-  user: User | null;
+  user: null;
 }
 
 export default function UpdateUser({ user }: Props) {

@@ -1,4 +1,3 @@
-import { createClient } from "@/utils/supabase/server";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { User } from "@supabase/supabase-js";
@@ -10,10 +9,6 @@ interface Props {
 
 export default async function AuthButton({ user }: Props) {
   const signOut = async () => {
-    "use server";
-
-    const supabase = createClient();
-    await supabase.auth.signOut();
     return redirect("/login");
   };
 
